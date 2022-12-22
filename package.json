@@ -1,0 +1,39 @@
+{
+  "name": "cleaning-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "dev": "nodemon server.js",
+    "seed": "node database/seeds/seeder.js",
+    "redis": "node redisClientConnection.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lykmapipo/mongoose-faker": "^0.12.0",
+    "axios": "^1.2.1",
+    "bcryptjs": "^2.4.3",
+    "concurrently": "^7.6.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cron": "^2.1.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-validator": "^6.14.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.12.1",
+    "mongoose": "^6.8.0",
+    "mongoose-fakery": "^0.1.7",
+    "node-cron": "^3.0.2",
+    "node-random-name": "^1.0.1",
+    "redis": "^4.5.1"
+  },
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20",
+    "supertest": "^6.3.3"
+  }
+}
