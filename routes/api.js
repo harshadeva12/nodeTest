@@ -17,6 +17,9 @@ router.get('/ping', (req, res) => {
 
 router.get('/', TestController.home);
 router.get('/type-check', TestController.checkType)
+router.get('/get-object', TestController.getObject)
+router.get('/get-string', TestController.getString)
+router.get('/get-null', TestController.getNull)
 router.get('/specific-field', TestController.specificField)
 router.get('/validation-test',[ validator.testRequest ], TestController.validationTest)
 router.post('/add-transaction', TestController.testTransactions)

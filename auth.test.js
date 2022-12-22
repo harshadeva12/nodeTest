@@ -1,11 +1,18 @@
-const app = require('./server.js')
-const supertest = require('supertest')
-const request = supertest(app)
+const app = require('./server.js');
+const request = require("supertest");
 
-describe('Test /Login', () => {
-  it('should return 200!', async () => {
-    request.post('/login').then((response) => {
-      expect(response.text).toBe('Pong!')
-    })
-  });
+describe('described test set', () => {
+
+    it('GET', async () => {
+        const { body, statusCode } = await request(app).get('/get-object');
+        expect(statusCode).toBe(200)
+    });
+
+    it('GET null', async () => {
+        const { body, statusCode } = await request(app).get('/get-null');
+        expect(statusCode).toBe(200)
+        expect(body).toEqual({})
+    });
+
 });
+

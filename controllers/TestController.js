@@ -8,6 +8,21 @@ exports.home = async (req, res) => {
     // res.sendFile(__dirname + '/../views/index.html')
 };
 
+exports.getObject = async (req, res) => {
+    res.json({
+        name:'test',
+        age:4
+    });
+};
+
+exports.getString = async (req, res) => {
+    res.send('Strings');
+};
+
+exports.getNull = async (req, res) => {
+    res.send(null);
+};
+
 exports.checkType = async (req, res) => {
     res.send(req.body);
 };
