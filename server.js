@@ -9,7 +9,8 @@ require('./cron/crone.js');
 const cors = require('cors');
 const whitelist = ['http://127.0.0.1'];
 const fakery = require('mongoose-fakery');
-
+const mail = require('./mail/mail.js')
+global.__basedir = __dirname;
 // const corsOptions = {
 //   origin: (origin, callback) => {
 //     if (whitelist.indexOf(origin) !== -1) {
@@ -93,7 +94,7 @@ app.use('/', routes);
 //       ids.forEach((item)=>{
 //         endpoints.push(url+item);
 //       })
-      
+
 //       axios.all(endpoints.map((endpoint) => axios.get(endpoint))).then(
 //         (data) => console.log(data),
 //       );
@@ -109,5 +110,7 @@ app.use('/', routes);
 // setInterval(() => {
 //     fetchAll();
 // }, 7000);
+
+
 
 module.exports = app;

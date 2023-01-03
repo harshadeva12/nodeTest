@@ -9,7 +9,7 @@ describe('described test set', () => {
     });
 
     it('GET null', async () => {
-        const { body, statusCode } = await request(app).get('/get-null');
+        const { body, statusCode } = await request(app).post('/get-null');
         expect(statusCode).toBe(200)
         expect(body).toEqual({})
     });
